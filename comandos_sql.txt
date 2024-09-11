@@ -25,4 +25,10 @@ INSERT INTO nomeTabela VALUES
 SELECT * FROM nomeTabela; #returna os valores dos campos
 
 ALTER TABLE nomeTabela
-ADD COLUMN nome_campo tipo campo #adicionar uma coluna
+ADD COLUMN nome_coluna tipo campo; #adicionar uma coluna, da pra adicionar AFTER nome_coluna antes do ponto e virgula para mudar a posição da coluna.
+
+ALTER TABLE nomeTabela
+DROP COLUMN nome_coluna
+
+ALTER TABLE nomeTabela
+MODIFY COLUMN nome_coluna alteração;
