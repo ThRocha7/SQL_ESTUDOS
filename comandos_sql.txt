@@ -1,5 +1,7 @@
 CREATE DATABASE nomeBanco; # cria banco de dados
 
+CREATE TABLE IF NOT EXISTS nomeTabela;
+
 CREATE TABLE nomeTabela(
     nome_campo tipoCampo
 ); # cria uma tabela
@@ -32,3 +34,22 @@ DROP COLUMN nome_coluna
 
 ALTER TABLE nomeTabela
 MODIFY COLUMN nome_coluna alteração;
+
+DROP nomeTabela;
+
+DROP TABLE IF EXISTS nomeTabela;
+
+UPDATE nomeTabela
+SET campo = ''
+WHERE coluna = ''; #Encontra e modifica dados
+LIMIT quantaslinhas; #limita a quantidade de linhas que serão manipuladas
+
+DELETE FROM nomeTabela
+WHERE campo = '';
+LIMIT quantaslinhas;
+
+TRUNCATE TABLE nomeTabela;
+
+SELECT * FROM nomeTabela
+ORDER BY campo; #asc -> traz de forma crescente; desc -> traz de forma decrescente
+
